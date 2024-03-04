@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0349B4832B95FBC50008FC08 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349B4822B95FBC50008FC08 /* ChatService.swift */; };
+		0349B4862B95FC6C0008FC08 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349B4852B95FC6C0008FC08 /* Constants.swift */; };
+		0349B4892B95FF1D0008FC08 /* InboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349B4882B95FF1D0008FC08 /* InboxService.swift */; };
 		0349DFA72B5E3E0E00BA3E49 /* MessangerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349DFA62B5E3E0E00BA3E49 /* MessangerApp.swift */; };
 		0349DFA92B5E3E0E00BA3E49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349DFA82B5E3E0E00BA3E49 /* ContentView.swift */; };
 		0349DFAB2B5E3E0F00BA3E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0349DFAA2B5E3E0F00BA3E49 /* Assets.xcassets */; };
@@ -66,6 +69,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0349B4822B95FBC50008FC08 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		0349B4852B95FC6C0008FC08 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0349B4882B95FF1D0008FC08 /* InboxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxService.swift; sourceTree = "<group>"; };
 		0349DFA32B5E3E0E00BA3E49 /* Messanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0349DFA62B5E3E0E00BA3E49 /* MessangerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerApp.swift; sourceTree = "<group>"; };
 		0349DFA82B5E3E0E00BA3E49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +142,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0349B4812B95FBBA0008FC08 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0349B4822B95FBC50008FC08 /* ChatService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0349B4842B95FC5C0008FC08 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0349B4852B95FC6C0008FC08 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0349B4872B95FF100008FC08 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0349B4882B95FF1D0008FC08 /* InboxService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		0349DF9A2B5E3E0E00BA3E49 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +186,7 @@
 		0349DFA52B5E3E0E00BA3E49 /* Messanger */ = {
 			isa = PBXGroup;
 			children = (
+				0349B4842B95FC5C0008FC08 /* Utils */,
 				0349DFAA2B5E3E0F00BA3E49 /* Assets.xcassets */,
 				0349DFB82B5E3E4100BA3E49 /* App */,
 				0349DFB72B5E3E3E00BA3E49 /* Core */,
@@ -296,6 +327,7 @@
 		036B168E2B5FFE6900A7D375 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				0349B4812B95FBBA0008FC08 /* Service */,
 				035120542B9314B20036134D /* ViewModel */,
 				035120532B9314A70036134D /* View */,
 			);
@@ -321,6 +353,7 @@
 		03C624B32B5E7852002E5887 /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
+				0349B4872B95FF100008FC08 /* Service */,
 				03F7C4A42B6E52D6008A6ADA /* ViewModels */,
 				03F7C4A32B6E5285008A6ADA /* Views */,
 			);
@@ -518,9 +551,12 @@
 				036B16902B5FFE7900A7D375 /* ChatView.swift in Sources */,
 				03E7A7D62B61517B0095F953 /* AuthService.swift in Sources */,
 				0349DFA92B5E3E0E00BA3E49 /* ContentView.swift in Sources */,
+				0349B4892B95FF1D0008FC08 /* InboxService.swift in Sources */,
+				0349B4862B95FC6C0008FC08 /* Constants.swift in Sources */,
 				036B16922B60007900A7D375 /* ChatMessageCell.swift in Sources */,
 				036B16942B60027300A7D375 /* ChatBubble.swift in Sources */,
 				036B168D2B5FFC4300A7D375 /* CircularProfileImageView.swift in Sources */,
+				0349B4832B95FBC50008FC08 /* ChatService.swift in Sources */,
 				03C624B52B5E7865002E5887 /* InboxView.swift in Sources */,
 				03E7A7D22B6151400095F953 /* LoginViewModel.swift in Sources */,
 				03C012D42B6F965D00AB557C /* NewMessageViewModel.swift in Sources */,

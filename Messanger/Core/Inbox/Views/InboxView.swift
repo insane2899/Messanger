@@ -23,8 +23,8 @@ struct InboxView: View {
                 ActiveNowView()
                 
                 List {
-                    ForEach(0 ... 10, id: \.self) { message in
-                        InboxRowView()
+                    ForEach(viewModel.recentMessages) { message in
+                        InboxRowView(message: message)
                     }
                 }
                 .listStyle(PlainListStyle())
@@ -61,6 +61,7 @@ struct InboxView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button( action: {
                         showNewMessageView.toggle()
+                        selectedUser = nil
                     }, label: {
                         Image(systemName: "square.and.pencil.circle.fill")
                             .resizable()
