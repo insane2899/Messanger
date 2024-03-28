@@ -19,21 +19,31 @@ struct InboxView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            List {
                 ActiveNowView()
-                
-                List {
-                    ForEach(viewModel.recentMessages) { message in
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets())
+                    .padding(.vertical)
+                    .padding(.horizontal, 4)
+                ForEach(viewModel.recentMessages) { message in
+                    ZStack {    // This ZStack is to remove the chevron that swiftUI provides with NavigationLinks in Lists
+                        NavigationLink(value: message) {
+                            EmptyView()
+                        }.opacity(0.0)
                         InboxRowView(message: message)
                     }
                 }
-                .listStyle(PlainListStyle())
-                .frame(height: UIScreen.main.bounds.height - 120)
-                //Lists inside a scrollView behave strangely so we need to add the modifiers
             }
+            .listStyle(PlainListStyle())
+            //Lists inside a scrollView behave strangely so we need to add the modifiers
             .onChange(of: selectedUser) { _, newValue in
                 showChat = newValue != nil
             }
+            .navigationDestination(for: Message.self, destination: { message in
+                if let user = message.user {
+                    ChatView(user: user)
+                }
+            })
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
@@ -74,6 +84,6 @@ struct InboxView: View {
     }
 }
 
-#Preview {
-    InboxView()
-}
+//#Preview {
+//    InboxView()
+//}
