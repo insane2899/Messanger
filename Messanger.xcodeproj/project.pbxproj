@@ -12,6 +12,8 @@
 		0331A0E62BB55C2F00D88C58 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0331A0E52BB55C2F00D88C58 /* FirebaseFirestoreSwift */; };
 		0331A0E82BB55C2F00D88C58 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0331A0E72BB55C2F00D88C58 /* FirebaseStorage */; };
 		0331A0EA2BB55DCB00D88C58 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331A0E92BB55DCB00D88C58 /* Date.swift */; };
+		0331A0EE2BB5600800D88C58 /* ActiveNowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331A0ED2BB5600800D88C58 /* ActiveNowViewModel.swift */; };
+		0331A0F12BB5625900D88C58 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331A0F02BB5625900D88C58 /* Route.swift */; };
 		0349B4832B95FBC50008FC08 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349B4822B95FBC50008FC08 /* ChatService.swift */; };
 		0349B4862B95FC6C0008FC08 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349B4852B95FC6C0008FC08 /* Constants.swift */; };
 		0349B4892B95FF1D0008FC08 /* InboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349B4882B95FF1D0008FC08 /* InboxService.swift */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		0331A0E92BB55DCB00D88C58 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		0331A0ED2BB5600800D88C58 /* ActiveNowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNowViewModel.swift; sourceTree = "<group>"; };
+		0331A0F02BB5625900D88C58 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		0349B4822B95FBC50008FC08 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		0349B4852B95FC6C0008FC08 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0349B4882B95FF1D0008FC08 /* InboxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxService.swift; sourceTree = "<group>"; };
@@ -98,6 +102,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0331A0EB2BB55FE000D88C58 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0331A0ED2BB5600800D88C58 /* ActiveNowViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0331A0EC2BB55FF900D88C58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03C624B72B5E7949002E5887 /* ActiveNowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0331A0EF2BB5625000D88C58 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				0331A0F02BB5625900D88C58 /* Route.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
 		0349B4812B95FBBA0008FC08 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +170,7 @@
 		0349DFA52B5E3E0E00BA3E49 /* Messanger */ = {
 			isa = PBXGroup;
 			children = (
+				0331A0EF2BB5625000D88C58 /* Routing */,
 				0349B4842B95FC5C0008FC08 /* Utils */,
 				0349DFAA2B5E3E0F00BA3E49 /* Assets.xcassets */,
 				0349DFB82B5E3E4100BA3E49 /* App */,
@@ -320,7 +349,8 @@
 		03C624B62B5E7938002E5887 /* ActiveNow */ = {
 			isa = PBXGroup;
 			children = (
-				03C624B72B5E7949002E5887 /* ActiveNowView.swift */,
+				0331A0EC2BB55FF900D88C58 /* View */,
+				0331A0EB2BB55FE000D88C58 /* ViewModel */,
 			);
 			path = ActiveNow;
 			sourceTree = "<group>";
@@ -495,12 +525,14 @@
 				03C624B52B5E7865002E5887 /* InboxView.swift in Sources */,
 				03E7A7D22B6151400095F953 /* LoginViewModel.swift in Sources */,
 				03C012D42B6F965D00AB557C /* NewMessageViewModel.swift in Sources */,
+				0331A0F12BB5625900D88C58 /* Route.swift in Sources */,
 				03F7C4A22B6E50C4008A6ADA /* UserService.swift in Sources */,
 				03C624B82B5E7949002E5887 /* ActiveNowView.swift in Sources */,
 				03C624C62B5EAF0D002E5887 /* ProfileViewModel.swift in Sources */,
 				036B168A2B5FF8EA00A7D375 /* User.swift in Sources */,
 				035120522B9312620036134D /* MessageService.swift in Sources */,
 				0349DFA72B5E3E0E00BA3E49 /* MessangerApp.swift in Sources */,
+				0331A0EE2BB5600800D88C58 /* ActiveNowViewModel.swift in Sources */,
 				035120502B9311710036134D /* Message.swift in Sources */,
 				03C624C42B5E8160002E5887 /* SettingsOptionsViewModel.swift in Sources */,
 				0349DFBF2B5E454000BA3E49 /* RegistrationView.swift in Sources */,
